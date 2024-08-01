@@ -1,0 +1,681 @@
+@import url('https://fonts.googleapis.com/css2?family=M+PLUS+1p:wght@300;400;500;700&family=Montserrat:wght@100;300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,200;9..40,300;9..40,400&family=Forum&display=swap');
+
+
+/*Colores*/
+$gold: hsl(38, 61%, 73%);
+$silver: hsla(0, 0%, 65%, 1);
+$grey: hsla(30, 3%, 34%, 1);
+$smoky-black-1: hsla(40, 12%, 5%, 1);
+$smoky-black-2: hsla(30, 8%, 5%, 1);
+$eerie-black-1: hsla(210, 4%, 9%, 1);
+$eerie-black-2: hsla(210, 4%, 11%, 1);
+$eerie-black-3: hsla(180, 2%, 8%, 1);
+$eerie-black-4: hsla(0, 0%, 13%, 1);
+$white: hsla(0, 0%, 100%, 1);
+$white-alpha-20: hsla(0, 0%, 100%, 0.2);
+$black: hsla(0, 0%, 0%, 1);
+
+$headline: calc(2rem + 2vw);
+
+
+html {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+li {
+    list-style: none;
+}
+
+a,
+img,
+data,
+span,
+input,
+select,
+ion-icon,
+textarea {
+    display: block;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    outline: none;
+    background: none;
+    border: none;
+    font-style: inherit;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+address {
+    font-style: normal;
+}
+
+button {
+    cursor: pointer;
+}
+
+body {
+    font-family: 'DM Sans', sans-serif;
+    background-color: $smoky-black-1;
+    color: $white;
+}
+
+
+section {
+    position: relative;
+    background-size: cover;
+    height: 100vh;
+}
+
+
+/*REUSADO*/
+.separator {
+    width: 8px;
+    height: 8px;
+    border: 1px solid $gold;
+    transform: rotate(45deg);
+}
+
+.container {
+    padding-inline: 16px;
+}
+
+.icon-wrapper {
+    position: relative;
+    margin-block-end: 20px;
+}
+
+.icon-wrapper .input-field {
+    margin-block-end: 0;
+    padding-inline-start: 40px;
+    appearance: none;
+    cursor: pointer;
+}
+
+.icon-wrapper ion-icon {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.4rem;
+    --ionicon-stroke-width: 50px;
+    pointer-events: none;
+}
+
+.icon-wrapper ion-icon:first-child {
+    left: 15px;
+}
+
+.icon-wrapper ion-icon:last-child {
+    right: 10px;
+}
+
+.text-center {
+    text-align: center;
+}
+
+
+
+
+/**
+   * TOPBAR
+   */
+
+.topbar {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding-block: 10px;
+    border-block-end: 1px solid $white-alpha-20;
+    z-index: 4;
+    transition: 250ms ease;
+    margin-inline: auto;
+}
+
+.topbar .container,
+.topbar-item {
+    display: flex;
+    align-items: center;
+}
+
+.topbar .container {
+    justify-content: center;
+    gap: 30px;
+}
+
+.topbar-item {
+    gap: 6px;
+}
+
+.topbar-item:not(.link) {
+    align-items: center;
+    display: flex;
+}
+
+.topbar .item-2 {
+    margin-inline-end: auto;
+}
+
+.topbar-item ion-icon {
+    --ionicon-stroke-width: 60px;
+}
+
+.topbar-item .span {
+    font-size: 16px;
+}
+
+.topbar .link {
+    transition: 250ms ease;
+}
+
+.topbar .link:is(:hover, :focus-visible) {
+    color: $gold;
+}
+
+
+
+
+/********************************************Header********************************************/
+
+.header {
+    top: 20px;
+    position: fixed;
+    left: 0;
+    width: 100%;
+    background-color: transparent;
+    padding-block: 40px;
+    z-index: 4;
+    border-block-end: 1px solid transparent;
+    transition: 250ms ease;
+}
+
+.header .container {
+    padding-inline: 20px;
+    max-width: unset;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 8px;
+}
+
+.header.active {
+    padding-block: 20px;
+}
+
+.header.hide {
+    transform: translateY(-120%);
+    transition-delay: 250ms;
+}
+
+
+ul {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    display: flex;
+    gap: 30px;
+}
+
+li:is(:hover, :focus-visible) {
+    color: $gold;
+}
+
+.header .btn {
+    display: block;
+    margin-inline-start: 0;
+}
+
+.btn {
+    position: relative;
+    background-color: $smoky-black-2;
+    color: $white;
+    font-size: 1.2rem;
+    font-weight: 400;
+    border: 2px solid $gold;
+    padding: 12px 45px;
+}
+
+.btn:hover {
+    background-color: $gold;
+    color: $black;
+}
+
+.navbar li::after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 0;
+    border-block: 1px solid $gold;
+    transition: width 0.3s;
+}
+
+.navbar li:hover::after {
+    width: 100%;
+}
+
+
+
+
+
+/********************************HERO SECTION ********************************/
+
+.hero {
+    background-image: url("/Resources/bg\ 1.jpg");
+    font-family: "Montserrat", sans-serif;
+    flex-shrink: 0;
+    min-width: 100%;
+    min-height: 100%;
+}
+
+.hero .container {
+    display: flex;
+    max-width: 1200px;
+    width: 100%;
+    margin-inline: auto;
+    justify-content: center;
+    align-items: center;
+}
+
+.overlay {
+    position: absolute;
+    background: rgb(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100%;
+}
+
+.intro {
+    margin-top: 20%;
+    color: white;
+
+    h1 {
+        font-size: 96px;
+        font-weight: 400;
+        line-height: 110%;
+        letter-spacing: 15.36px;
+        text-transform: uppercase;
+        padding: 10px;
+        margin: 0;
+    }
+
+    h2 {
+        font-size: 24px;
+        font-weight: 700;
+        line-height: 110%;
+        letter-spacing: 3.84px;
+        text-transform: uppercase;
+        padding: 10px;
+        padding-bottom: 50px;
+        margin: 0;
+    }
+
+    button {
+        background-color: #C9A227;
+        border: none;
+        font-family: "Montserrat", sans-serif;
+        font-size: 12px;
+        font-weight: 700;
+        color: white;
+        text-decoration: none;
+        letter-spacing: 1.92px;
+        padding: 15px 24px;
+        margin: 4px 2px;
+        cursor: pointer;
+    }
+}
+
+.hero-btn {
+    position: absolute;
+    bottom: 50px;
+    right: 50px;
+    z-index: 2;
+    font-family: "Montserrat", sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    width: 110px;
+    height: 110px;
+    padding: 12px;
+    color: $smoky-black-2;
+}
+
+/********************************************About********************************************/
+
+.About {
+    background-image: url("/Resources/shape-1.png");
+    background-size: auto;
+    background-color: $eerie-black-1;
+    padding-block: 170px 100px;
+    min-width: 100%;
+    min-height: 100%;
+
+    button {
+        background-color: #C9A227;
+        border: none;
+        font-family: "Montserrat", sans-serif;
+        font-size: 18px;
+        font-weight: 700;
+        color: white;
+        text-decoration: none;
+        letter-spacing: 1.92px;
+        padding: 12px 32px;
+        margin: 4px 2px;
+        cursor: pointer;
+    }
+}
+
+.About .container {
+    display: grid;
+    grid-template-columns: 0.7fr 1fr;
+    max-width: 1200px;
+    width: 100%;
+    margin-inline: auto;
+}
+
+.about-content {
+    padding-inline-end: 90px;
+
+
+    h1 {
+
+        padding: 20px;
+        font-family: 'Forum', cursive;
+        font-size: 48px;
+        color: #C9A227;
+    }
+
+    p {
+        font-family: 'DM Sans', sans-serif;
+        font-size: 18px;
+        font-weight: 400;
+        line-height: normal;
+        letter-spacing: 0.72px;
+    }
+}
+
+
+.filter {
+    padding-bottom: 15px;
+    padding-top: 15px;
+    filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(288deg) brightness(102%) contrast(102%) opacity(60%);
+}
+
+
+
+
+/********************************************Menu********************************************/
+
+
+.Menu {
+    background-color: $smoky-black-2;
+
+    h3{
+        padding: 10px;
+    }
+
+    .separator{
+        margin: 20px auto;
+    }
+}
+
+.Menu .container {
+    display: block;
+    max-width: 1200px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    width: 100%;
+    margin-inline: auto;
+}
+
+.Menu-btn {
+    position: relative;
+    background-color: $smoky-black-2;
+    color: $gold;
+    font-size: 1.2rem;
+    font-weight: 400;
+    border: 2px solid $gold;
+    padding: 12px 45px;
+    bottom: 4%  ;
+}
+
+.subtitulo {
+    position: relative;
+    color: $gold;
+    font-weight: 400;
+    font-size: 1.2rem;
+    letter-spacing: 0.4em;
+    text-transform: uppercase;
+    margin-block-end: 12px;
+}
+
+.headline {
+    font-family: 'Forum', cursive;
+    font-weight: 400;
+    font-size: $headline;
+    color: $white;
+    line-height: 1.4em;
+    text-transform: uppercase;
+}
+
+.section-text {
+    margin-block-end: 75px;
+    max-width: 420px;
+    margin-inline: auto;
+    line-height: 1.88em;
+}
+
+
+.img-grid {
+    display: grid;
+    position: relative;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 150px;
+}
+
+.card {
+    background-size: cover;
+}
+
+.img-cover {
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+}
+
+.has-before{
+    position: relative;
+    padding-block: 30px;
+}
+
+.title::after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 0;
+    border-block: 1px solid $gold;
+    transition: width 0.3s;
+}
+
+.img-grid li:nth-child(1),
+.img-grid li:nth-child(3) {
+    transform: translateY(-120px);
+}
+
+.img-grid li:nth-child(2) {
+    transform: translateY(-40px);
+}
+
+.Menu-btn:hover {
+    background-color: $gold;
+    color: $black;
+}
+
+
+
+
+/*About - Contactar*/
+
+.Contactar {
+    background-image: url("/Resources/bg\ 2.jpg");
+    flex-shrink: 0;
+    min-width: 100%;
+    min-height: 100%;
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 400;
+
+    textarea {
+        resize: none;
+        height: 140px;
+        padding-block: 20px;
+        line-height: 1em;
+    }
+
+    h2 {
+        font-family: 'Forum', cursive;
+        font-size: calc(2rem + 2.5vw);
+        font-weight: 400;
+        color: $white;
+        text-align: center;
+        line-height: 1.2em;
+    }
+
+    p {
+        text-align: center;
+        margin-block-end: 20px;
+    }
+}
+
+.Contactar .container {
+    min-width: 100%;
+    min-height: 100%;
+    display: flex;
+    max-width: 1200px;
+    width: 100%;
+    margin-inline: auto;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-container {
+    background-color: $smoky-black-2;
+    display: grid;
+    grid-template-columns: 1fr 0.5fr;
+}
+
+.input-field {
+    background-color: $eerie-black-2;
+    color: $white;
+    height: 56px;
+    padding: 10px 20px;
+    font-family: DM Sans, sans-serif;
+    font-weight: 400;
+    border: 1px solid $white-alpha-20;
+    margin-block-end: 20px;
+    outline: none;
+    transition: border-color 500ms ease;
+}
+
+.Contactar .wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 20px;
+}
+
+.Contactar button {
+    background-color: $gold;
+    max-width: 100%;
+    width: 100%;
+    border: none;
+    font-family: "Montserrat", sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    color: $black;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 18px 45px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+
+.form-left,
+.form-right {
+    padding: 75px 60px;
+}
+
+.form-right {
+    background-image: url("/Resources/form-pattern.png");
+    text-align: center;
+
+    .headline {
+        margin-block-end: 20px;
+    }
+
+    .separator {
+        margin: 20px auto;
+    }
+
+    p {
+        font-weight: 300;
+        margin-block-end: 10px;
+    }
+
+    address {
+        color: $silver;
+        margin-block-end: 25px;
+    }
+}
+
+.body-1 {
+    font-weight: 400;
+    color: $silver;
+}
+
+
+.contact-number {
+    color: $gold;
+    margin-inline: auto;
+    font-size: 2.2rem;
+}
+
+.Contactar .tres {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+
+/********************************************Footer********************************************/
+
+.footer {
+    background-color: $smoky-black-1;
+    padding: 5px;
+
+    .headline {
+        font-family: 'DM Sans', sans-serif;
+        font-size: 1rem;
+    }
+}
+
+.footer .container {
+    display: flex;
+    max-width: 1200px;
+    width: 100%;
+    margin-inline: auto;
+    justify-content: center;
+}

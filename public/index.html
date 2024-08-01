@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>The Garden</title>
+
+	<link rel="stylesheet" href="/css/style.css">
+	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+
+</head>
+
+
+<body>
+
+
+	<div class="topbar">
+		<div class="container">
+
+			<address class="topbar-item">
+				<div class="icon">
+					<ion-icon name="location-outline" aria-hidden="true"></ion-icon>
+				</div>
+
+				<span class="span">
+					Urb. Ignacio Casanova # 61273 Dpto. 950
+				</span>
+			</address>
+
+			<div class="separator"></div>
+
+			<div class="topbar-item item-2">
+				<div class="icon">
+					<ion-icon name="time-outline" aria-hidden="true"></ion-icon>
+				</div>
+
+				<span class="span">8:00 am a 10:00 pm</span>
+			</div>
+
+			<a href="tel:+11234567890" class="topbar-item link">
+				<div class="icon">
+					<ion-icon name="call-outline" aria-hidden="true"></ion-icon>
+				</div>
+
+				<span class="span">+506 2278-0554</span>
+			</a>
+
+			<div class="separator"></div>
+
+			<a href="mailto:reservar@garden.com" class="topbar-item link">
+				<div class="icon">
+					<ion-icon name="mail-outline" aria-hidden="true"></ion-icon>
+				</div>
+
+				<span class="span">reservar@garden.com</span>
+			</a>
+
+		</div>
+	</div>
+
+	<header class="header active" data-header>
+		<div class="container">
+			<a class="logo" href="">
+				<img src="/resources/logo.png" alt="logo" class="logo" width="160" height="70" />
+			</a>
+
+			<nav class="navbar">
+				<ul>
+					<li><a href="#inicio">Inicio</a></li>
+					<li><a href="#menu">Menu</a></li>
+					<li><a href="#historia">Historia</a></li>
+					<li><a href="#contacto">Contacto</a></li>
+				</ul>
+			</nav>
+
+			<button class="btn">Contactar</button>
+		</div>
+	</header>
+
+	<main>
+		<!-------------------------------Primera Seccion que ve el Usuario------------------------------->
+		<section class="hero text-center" id="inicio">
+			<div class="overlay">
+				<div class="container">
+					<div class="intro">
+						<h1>The
+							<br>Garden
+						</h1>
+						<h2>Hacemos de la comida una experiencia unica</h2>
+						<button class="btn" onclick="location.href='resources/menu.pdf';">Explorar Menu</button>
+					</div>
+				</div>
+
+				<a href="#contacto" class="hero-btn">
+					<img src="/Resources/btn_Reservar.png" width="110" height="110" alt="booking icon">
+				</a>
+
+			</div>
+
+		</section>
+
+		<!-------------------------------Seccion Menu------------------------------->
+		<section class="Menu text-center" id="menu">
+			<div class="container">
+				<p class="subtitulo">Dejate llevar por nuestros platillos</p>
+				<div class="separator"></div>
+				<h2 class="headline">Nuestras Especialidades</h2>
+				<p class="section-text">Contamos con una variedad de comida, para toda hora del dia, con nuestros chefs
+					expertos.</p>
+				<ul class="img-grid">
+					<li>
+						<div class="card">
+							<div class="content">
+								<a class="has-before" href="">
+									<figure class="img-holder">
+										<img class="img-cover" src="/Resources/event-1.jpg" alt="">
+									</figure>
+								</a>
+								<div class="card-content">
+									<h3 class="title">Desayunos</h3>
+									<p></p>
+								</div>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="card">
+							<div class="content">
+								<a class="has-before" href="">
+									<figure class="img-holder">
+										<img class="img-cover" src="/Resources/event-2.jpg" alt="">
+									</figure>
+								</a>
+								<div class="card-content">
+									<h3 class="title">Almuerzos</h3>
+									<p></p>
+								</div>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="card">
+							<div class="content">
+								<a class="has-before" href="">
+									<figure class="img-holder">
+										<img class="img-cover" src="/Resources/event-3.jpg" alt="">
+									</figure>
+								</a>
+								<div class="card-content">
+									<h3 class="title">Cena</h3>
+									<p></p>
+								</div>
+							</div>
+						</div>
+					</li>
+				</ul>
+			</div>
+			<button class="Menu-btn">Contactar</button>
+		</section>
+
+		<!-------------------------------Seccion About------------------------------->
+		<section class="About text-center" id="historia">
+			<div class="container">
+				<div class="about-content">
+					<h1>Nuestra Historia</h1>
+					<p>En lo más pintoresco de la ciudad, surge nuestro restaurante gourmet de cinco estrellas,
+						un oasis culinario donde los sabores se convierten en arte. Con una elegancia sin igual,
+						deleitamos paladares con ingredientes exquisitos y técnicas innovadoras. </p>
+					<br><br>
+					<p>Cada plato es una sinfonía de aromas y texturas que transporta a nuestros comensales
+						a un viaje gastronómico inigualable. Bienvenidos a un mundo donde la pasión por la alta
+						cocina cobra vida en cada bocado.</p>
+					<figure class="firma">
+						<img src="/Resources/Arthur_Miller_signature.svg" class="filter">
+					</figure>
+					<button class="btn">Leer Más</button>
+				</div>
+				<figure class="banner">
+					<img src="/Resources/room.png" height="600" width="570">
+				</figure>
+
+			</div>
+		</section>
+
+
+		<!-------------------------------Seccion Contactar------------------------------->
+
+		<!-------------------------------Este es el forms que se conecta al SQL------------------------------->
+
+		<section class="Contactar" id="contacto">
+
+			<div class="overlay">
+				<div class="container">
+					<div class="form-container">
+						<form class="form-left" id="reserva" action="" method="get">
+							<h2>Reserva Online</h2>
+							<p>Reserva llenando el formulario</p>
+
+							<div class="wrapper">
+								<input class="input-field" type="text" id="nombre" name="q"
+									placeholder="Nombre Completo" required autocomplete="off">
+								<input class="input-field" type="email" id="correo" name="Correo"
+									placeholder="Correo Electronico" required autocomplete="off"
+									pattern="[^\s@]+@[^\s@]+\.[^\s@]+">
+							</div>
+							<div class="wrapper tres">
+
+								<div class="icon-wrapper">
+									<ion-icon name="person-outline" role="img"></ion-icon>
+									<select class="input-field" name="cantidad" id="cantidad" required
+										autocomplete="off">
+										<option value="1">1</option>
+										<option value="2">2</option>
+										<option value="3">3</option>
+										<option value="4">4</option>
+										<option value="5">5</option>
+										<option value="6">6</option>
+									</select>
+									<ion-icon name="chevron-down-outline"></ion-icon>
+								</div>
+
+								<div class="icon-wrapper">
+									<ion-icon name="calendar-outline" role="img"></ion-icon>
+									<input class="input-field" type="date" id="fecha" name="fecha" required
+										autocomplete="off">
+								</div>
+
+								<div class="icon-wrapper">
+									<ion-icon name="time-outline" role="img"></ion-icon>
+									<input class="input-field" type="time" id="hora" name="hora" required
+										autocomplete="off">
+								</div>
+
+							</div>
+
+							<textarea class="input-field" id="nota" name="nota" rows="4" cols="50" placeholder="Nota"
+								autocapitalize="off"></textarea>
+
+							<button class="btn btn-submit" id="save">Reservar</button>
+						</form>
+
+						<div class="form-right">
+							<h2 class="headline">Contactanos
+							</h2>
+							<p>Telefono:</p>
+							<a href="tel: 22487115" class="contact-number">
+								2278-0554
+							</a>
+							<div class="separator"></div>
+							<p>Ubicacion:</p>
+							<address>
+								Urb. Ignacio Casanova # 61273,
+								<br>
+								Dpto. 950
+							</address>
+
+
+							<p>Almuerzo</p>
+
+							<p class="body-1">
+								Lunes a Sabado <br>
+								11.00 am - 2.30pm
+							</p>
+
+							<p>Cena</p>
+
+							<p class="body-1">
+								Lunes a Sabado <br>
+								05.00 pm - 10.00pm
+							</p>
+						</div>
+
+					</div>
+					<div id="results"></div>
+				</div>
+			</div>
+
+
+		</section>
+
+		<footer class="footer text-center">
+			<div class="container">
+				<h2 class="headline">Grupo 03 | Copyright ©2023</h2>
+			</div>
+
+
+		</footer>
+	</main>
+
+	<!--Custom JS-->
+	<script src="scripts/script.js"></script>
+	<!--Ion Icon-->
+	<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+	<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+	<!--JQuery-->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+	<!--Firebase-->
+	<script src="https://www.gstatic.com/firebasejs/8.4.3/firebase-app.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/8.4.3/firebase-auth.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/8.4.3/firebase-firestore.js"></script>
+	<script src="/scripts/firebase.auth.js"></script>
+	<script src="/scripts/reservaciones.js"></script>
+	<script src="/scripts/comida.js"></script>
+	<script src="/scripts/bebida.js"></script>
+
+</body>
+
+
+</html>
